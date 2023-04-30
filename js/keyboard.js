@@ -1,8 +1,8 @@
 const KeyRowOne = ['`', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '=', 'Backspace'];
 const KeyRowTwo = ['Tab', 'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', '[', ']', '\\', 'Del'];
 const KeyRowThree = ['CapsLock', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', ';', "'", 'Enter'];
-const KeyRowFour = ['Shif', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', ',', '.', '&#8593;', 'Shif'];
-const KeyRowFive = ['Ctrl', 'Win', 'Altt', 'Space', 'Altt', 'Ctrl', '&#8592;', '&#8595;', '&#8594;'];
+const KeyRowFour = ['Shift', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', ',', '.', '&#8593;', 'Shift'];
+const KeyRowFive = ['Ctrl', 'Win', 'Alt', 'Space', 'Alt', 'Ctrl', '&#8592;', '&#8595;', '&#8594;'];
 const body = document.querySelector('body');
 
 function createKeyboard() {
@@ -43,7 +43,7 @@ function createKeyboard() {
 	for(let i=0; i < KeyRowFour.length; i++) {
 		let newComponentSingle = createComponentKey('button', 'key-single', KeyRowFour[i]);
 		let newComponentDouble = createComponentKey('button', 'key-double', KeyRowFour[i]);
-		if( KeyRowFour[i] === 'Shif') {
+		if( KeyRowFour[i] === 'Shift') {
 			rowFour.append(newComponentDouble);
 			if(i === 0) {newComponentDouble.setAttribute('id', 'shiftleft')};
 			if(i === 11) {newComponentDouble.setAttribute('id', 'shiftright')};
@@ -63,6 +63,7 @@ function createKeyboard() {
 		} else {
 			rowFive.append(newComponentSingle);
 			if(i === 0) {newComponentSingle.setAttribute('id', 'controlleft')};
+			if(i === 1) {newComponentSingle.setAttribute('id', 'metaleft')};
 			if(i === 2) {newComponentSingle.setAttribute('id', 'altleft')};
 			if(i === 4) {newComponentSingle.setAttribute('id', 'altright')};
 			if(i === 5) {newComponentSingle.setAttribute('id', 'controlright')};
