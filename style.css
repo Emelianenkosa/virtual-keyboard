@@ -1,0 +1,45 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+  font-size: 20px;
+  line-height: 26px;
+  color: #fce6ef;
+  background-color: #d6dae4;
+}
+
+.keyboard {
+	max-width: 600px;
+	margin: 0 auto;
+	margin-top: 50vh;
+	transform: translateY(-108px);
+}
+
+.row {
+	display: flex;
+	justify-content: space-between;
+	gap: 5px;
+	margin-bottom: 10px;
+}
+
+.key-single {
+	width: 35px;
+	height: 35px;
+}
+
+.key-double {
+	width: 70px;
+	height: 35px;
+}
+
+.key-space {
+	flex-grow: 1;
+	height: 35px;
+}
+
+.key-active {
+	background: blueviolet;
+}
