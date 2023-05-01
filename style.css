@@ -5,6 +5,7 @@
 }
 
 body {
+	text-align: center;
   font-size: 20px;
   line-height: 26px;
   color: #fce6ef;
@@ -42,4 +43,10 @@ body {
 
 .key-active {
 	background: blueviolet;
+}
+
+.language-text {
+
+	font-size: 20px;
+	color: black;
 }
